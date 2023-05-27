@@ -1,9 +1,5 @@
 package droid.surf;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,9 +10,9 @@ import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdSize;
-import com.google.android.gms.ads.AdView;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 /**
  * 波乗り記録ログリスト
@@ -89,8 +85,6 @@ public class SurfRecordLogListActivity extends Activity implements OnItemClickLi
         LinearLayout layout = (LinearLayout)findViewById(R.id.statLayout);
         layout.removeAllViews();
         
-        addAdView(layout);
-        
         layout.addView(lv);
         
         // リスナー登録
@@ -138,17 +132,5 @@ public class SurfRecordLogListActivity extends Activity implements OnItemClickLi
 		intent.putExtra(Intent.EXTRA_TITLE, getString(R.string.app_name));
 		intent.putExtra(Intent.EXTRA_TEXT, msg); 
 		startActivity(Intent.createChooser(intent, getString(R.string.log_title)));
-	}
-
-	/**
-	 * adMobビューを追加する
-	 * @param layout
-	 */
-	private void addAdView(LinearLayout layout) {
-        AdView adView = new AdView(this);
-        adView.setAdUnitId("ca-app-pub-4280826531916194/3987301506");
-        adView.setAdSize(AdSize.SMART_BANNER);
-        layout.addView(adView);
-		adView.loadAd(new AdRequest.Builder().build());
 	}
 }

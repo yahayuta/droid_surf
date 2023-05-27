@@ -1,11 +1,5 @@
 package droid.surf;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ContentValues;
@@ -26,8 +20,11 @@ import android.widget.Spinner;
 import android.widget.TimePicker;
 import android.widget.TimePicker.OnTimeChangedListener;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 波乗り記録ＡＰＰ
@@ -38,8 +35,6 @@ public class SurfRecordActivity extends Activity implements OnClickListener,  On
 	
 	/** メニューアイテムID0 */
 	private final static int MENU_ITEM0 = 0;
-	/** メニューアイテムID1 */
-	private final static int MENU_ITEM1 = 1;
 	/** メニューアイテムID2 */
 	private final static int MENU_ITEM2 = 2;
 	/** メニューアイテムID3 */
@@ -105,10 +100,6 @@ public class SurfRecordActivity extends Activity implements OnClickListener,  On
         
         // 状態初期化
         initStatus();
-        
-        //AdView初期化
-        AdView adView = (AdView)this.findViewById(R.id.adView);
-        adView.loadAd(new AdRequest.Builder().build());
     }
     
     // 初期化
@@ -558,10 +549,6 @@ public class SurfRecordActivity extends Activity implements OnClickListener,  On
 		MenuItem actionItem0 = menu.add(0, MENU_ITEM0, 0, getString(R.string.menu_detail));
 		actionItem0.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
 		
-		// 波乗り記録チャートメニュー追加
-		MenuItem actionItem1 = menu.add(0, MENU_ITEM1, 0, getString(R.string.menu_chart));
-		actionItem1.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
-		
 		// 波乗り記録新規登録メニュー追加
 		MenuItem actionItem2 = menu.add(0, MENU_ITEM2, 0, getString(R.string.menu_add));
 		actionItem2.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
@@ -592,11 +579,6 @@ public class SurfRecordActivity extends Activity implements OnClickListener,  On
 				// 波乗り記録詳細メニュー
 		        Intent intent = new Intent(SurfRecordActivity.this, SurfRecordDetailActivity.class);
 		        startActivity(intent);
-				return true;
-			case MENU_ITEM1:
-				// 波乗り記録チャートメニュー
-		        Intent intent2 = new Intent(SurfRecordActivity.this, SurfRecordChartActivity.class);
-		        startActivity(intent2);
 				return true;
 			case MENU_ITEM2:
 				// 波乗り記録新規登録メニュー
