@@ -1,6 +1,6 @@
 # Surf Log 📱🏄‍♂️
 
-A comprehensive Android application for tracking and analyzing your surfing sessions. Log your surf sessions with detailed information about conditions, performance, and experiences.
+A comprehensive Android application for tracking and analyzing your surfing sessions. Log your surf sessions with detailed information about conditions, performance, and experiences. The project has undergone a significant modernization effort, updating its architecture and dependencies to align with modern Android development best practices.
 
 ## 🌊 Features
 
@@ -19,10 +19,10 @@ A comprehensive Android application for tracking and analyzing your surfing sess
 
 ### Prerequisites
 
-- Android Studio Arctic Fox or later
-- Android SDK 14+ (API level 14)
-- Gradle 8.0.1+
-- Java 8 or higher
+- Android Studio Giraffe or later
+- Android SDK 34 (Android 14)
+- Gradle 8.2 or higher
+- Java 17 or higher (recommended for Gradle 8.x)
 
 ### Installation
 
@@ -89,15 +89,18 @@ droid_surf/
 ├── app/
 │   ├── src/main/
 │   │   ├── java/droid/surf/
-│   │   │   ├── SurfRecordActivity.java      # Main activity
-│   │   │   ├── SurfRecordDetailActivity.java # Detail view
-│   │   │   ├── SurfRecordLogListActivity.java # Log list
-│   │   │   ├── SurfRecordDBHelper.java      # Database helper
-│   │   │   ├── SurfRecordEntity.java        # Data model
-│   │   │   └── SurfRecordrUtil.java         # Utility functions
+│   │   │   ├── SurfRecordActivity.kt      # Main activity (Kotlin, MVVM, ViewBinding)
+│   │   │   ├── SurfRecordDetailActivity.kt # Detail view (Kotlin, MVVM, ViewBinding)
+│   │   │   ├── SurfRecordLogListActivity.kt # Log list (Kotlin, MVVM, ViewBinding)
+│   │   │   ├── SurfRecordEntity.kt        # Room Entity
+│   │   │   ├── SurfRecordDao.kt           # Room Data Access Object
+│   │   │   ├── SurfLogDatabase.kt         # Room Database
+│   │   │   ├── SurfRecordRepository.kt    # Data Repository
+│   │   │   ├── SurfRecordViewModel.kt     # ViewModel for UI data
+│   │   │   └── SurfApplication.kt         # Custom Application class
 │   │   ├── res/
 │   │   │   ├── layout/                      # UI layouts
-│   │   │   ├── values/                      # English strings
+│   │   │   ├── values/                      # English strings, themes, colors
 │   │   │   ├── values-ja/                   # Japanese strings
 │   │   │   └── drawable/                    # App icons and images
 │   │   └── AndroidManifest.xml
@@ -107,15 +110,27 @@ droid_surf/
 └── settings.gradle
 ```
 
+## ✨ Modernization Highlights
+
+This project has undergone a significant modernization effort, including:
+
+- **AndroidX Migration**: Upgraded all deprecated support libraries to AndroidX for improved compatibility and access to modern features.
+- **Kotlin Conversion**: All core Java activities and utility classes have been converted to Kotlin, leveraging its conciseness and safety features.
+- **ViewBinding Implementation**: Replaced `findViewById` calls with ViewBinding for type-safe and null-safe access to UI elements, reducing boilerplate and runtime errors.
+- **Room Persistence Library**: Migrated from raw SQLite database operations to Room, providing an abstraction layer over SQLite for more robust database interactions, compile-time SQL validation, and easier migration handling.
+- **MVVM Architecture**: Refactored the application to follow the Model-View-ViewModel architectural pattern, separating concerns and improving testability, maintainability, and scalability.
+- **LiveData & Coroutines**: Utilized LiveData for observable data holders and Kotlin Coroutines for asynchronous operations, ensuring a responsive UI and efficient background processing.
+- **Target SDK Update**: Updated `compileSdkVersion` and `targetSdkVersion` to 34 (Android 14) to ensure compatibility with the latest Android features and security enhancements.
+
 ## 🛠️ Technical Details
 
 - **Minimum SDK**: API 14 (Android 4.0)
-- **Target SDK**: API 33 (Android 13)
-- **Compile SDK**: API 33
-- **Build Tools**: 30.0.3
-- **Gradle Version**: 8.0.1
-- **Language**: Java
-- **Database**: SQLite (via Android's built-in database)
+- **Target SDK**: API 34 (Android 14)
+- **Compile SDK**: API 34
+- **Gradle Version**: 8.9
+- **Android Gradle Plugin (AGP)**: 8.2.0
+- **Language**: Kotlin
+- **Database**: Room Persistence Library
 
 ## 📈 Features in Detail
 
@@ -174,4 +189,4 @@ If you encounter any issues or have questions:
 
 ---
 
-**Happy Surfing! 🏄‍♀️🌊** 
+**Happy Surfing! 🏄‍♀️🌊**
