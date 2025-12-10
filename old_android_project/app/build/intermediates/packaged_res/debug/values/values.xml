@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
+    <color name="black">#FF000000</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">SURF LOG</string>
+    <string msgid="3983201110833868073" name="auth_client_needs_enabling_title">"An application requires Google Play Services to be enabled."</string>
+    <string msgid="7999585836145154206" name="auth_client_needs_installation_title">"An application requires installation of Google Play Services."</string>
+    <string msgid="6488605506794595966" name="auth_client_needs_update_title">"An application requires an update for Google Play Services."</string>
+    <string msgid="3635065018897986478" name="auth_client_play_services_err_notification_msg">"Google Play services error"</string>
+    <string msgid="6304135633531965756" name="auth_client_requested_by_msg">"Requested by <ns1:g id="APP_NAME">%1$s</ns1:g>"</string>
+    <string msgid="2534454398764507874" name="auth_client_using_bad_version_title">"An application attempted to use a bad version of Google Play Services."</string>
+    <string name="board_bb">BODY BOARD</string>
+    <string name="board_fun">SEMI-LONG</string>
+    <string name="board_gun">GUN</string>
+    <string name="board_long">LONG</string>
+    <string name="board_short">SHORT</string>
+    <string name="board_sup">STAND-UP PADDLE BOARD</string>
+    <string name="button_bwd">BACKWARD</string>
+    <string name="button_delete">DELETE THIS RECORD</string>
+    <string name="button_fwd">FORWARD</string>
+    <string name="button_save">SAVE</string>
+    <string name="chart_lbl_count">COUNTS</string>
+    <string name="chart_lbl_crowd">CROWD</string>
+    <string name="chart_lbl_hours">HOURS</string>
+    <string name="chart_lbl_point">SURF POINT</string>
+    <string name="chart_lbl_size">SIZE</string>
+    <string name="chart_lbl_takeoffs">TAKE OFFS</string>
+    <string name="chart_menu_point">SURF POINT</string>
+    <string name="chart_menu_size">WAVE SIZE</string>
+    <string name="chart_menu_time_point">TIME BY SURF POINT</string>
+    <string name="chart_menu_to_crowd">TAKE OFFS BY CROWD</string>
+    <string name="chart_menu_to_point">TAKE OFFS BY SURF POINT</string>
+    <string name="chart_menu_to_size">TAKE OFFS BY SIZE</string>
+    <string name="crowd_heavy">HEAVY</string>
+    <string name="crowd_high">HIGH</string>
+    <string name="crowd_low">LOW</string>
+    <string name="crowd_noone">NO ONE</string>
+    <string name="crowd_normal">NORMAL</string>
+    <string name="detail_ave_takeoff">AVERAGE NUMBER OF TAKE OFF :</string>
+    <string name="detail_ave_time">AVERAGE TIME YOU SURF :</string>
+    <string name="detail_num_surf">NUMBER OF YOU SURF :</string>
+    <string name="detail_takeoff">NUMBER OF TAKE OFF :</string>
+    <string name="detail_takeoff_rate">TAKE OFF RATE (TAKE OFF ONCE IN WHAT MINUTES):</string>
+    <string name="detail_takeoff_rate_msg"/>
+    <string name="detail_time">TIME YOU SURF :</string>
+    <string name="disp_board">BOARD TYPE</string>
+    <string name="disp_cloud">CROWD</string>
+    <string name="disp_comment">COMMENT</string>
+    <string name="disp_date">DATE</string>
+    <string name="disp_point">SURF POINT NAME</string>
+    <string name="disp_size">WAVE SIZE</string>
+    <string name="disp_start_time">START TIME</string>
+    <string name="disp_takeoff">NUMBER OF TAKE OFF</string>
+    <string name="disp_time">HOURS YOU SURF</string>
+    <string name="disp_weather">WEATHER</string>
+    <string name="disp_wind">WIND</string>
+    <string name="log_board">BOARD :</string>
+    <string name="log_comment">COMMENT :</string>
+    <string name="log_crowd">CROWD :</string>
+    <string name="log_date">DATE :</string>
+    <string name="log_hash">#DROIDSURFLOG</string>
+    <string name="log_hours">HOURS :</string>
+    <string name="log_point">POINT :</string>
+    <string name="log_size">WAVE SIZE :</string>
+    <string name="log_takeoff">TAKE OFFS :</string>
+    <string name="log_time">START :</string>
+    <string name="log_title">EXPORT THIS RECORD</string>
+    <string name="log_weather">WEATHER :</string>
+    <string name="log_wind">WIND :</string>
+    <string name="menu_add">ADD RECORD</string>
+    <string name="menu_chart">CHART</string>
+    <string name="menu_detail">DETAIL</string>
+    <string name="menu_edit">EDIT RECORD</string>
+    <string name="menu_exp_other">EXPORT TO OTHER APPS</string>
+    <string name="menu_export">EXPORT</string>
+    <string name="menu_loglist">LOG LIST</string>
+    <string name="menu_reset">RESET</string>
+    <string name="msg_all_del_con">ARE YOU SURE TO DELETE ALL RECORDS?</string>
+    <string name="msg_del_con">ARE YOU SURE TO DELETE THIS RECORD?</string>
+    <string name="msg_need_number"> MUST BE NUMBER VALUE.</string>
+    <string name="msg_no_null"> MUST BE FILLED.</string>
+    <string name="msg_saved">RECORD SAVED</string>
+    <string name="size_ankle">0.1FT</string>
+    <string name="size_belly">1.5FT</string>
+    <string name="size_chest">2FT</string>
+    <string name="size_double">6FT</string>
+    <string name="size_flat">0FT</string>
+    <string name="size_giant">GIANT WAVE</string>
+    <string name="size_head">3FT</string>
+    <string name="size_knee">0.25FT</string>
+    <string name="size_over_h">4FT</string>
+    <string name="size_shin">0.2FT</string>
+    <string name="size_shoulder">2.5FT</string>
+    <string name="size_thigh">0.5FT</string>
+    <string name="size_triple">8FT</string>
+    <string name="size_waist">1FT</string>
+    <string name="weather_cloud">CLOUD</string>
+    <string name="weather_fine">FINE</string>
+    <string name="weather_rain">RAIN</string>
+    <string name="weather_snow">SNOW</string>
+    <string name="wind_none">NO WIND</string>
+    <string name="wind_off">OFF SHORE</string>
+    <string name="wind_on">ON SHORE</string>
+    <string name="wind_side_off">SIDE OFF SHORE</string>
+    <string name="wind_side_on">SIDE ON SHORE</string>
+    <string name="wind_strong_off">STRONG OFF SHORE</string>
+    <string name="wind_strong_on">STRONG ON SHORE</string>
+    <string name="wind_weak_off">WEAK OFF SHORE</string>
+    <string name="wind_weak_on">WEAK ON SHORE</string>
+    <style name="Theme.DroidSurf" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    
+    <item name="colorPrimary">@color/purple_500</item>
+    <item name="colorPrimaryVariant">@color/purple_700</item>
+    <item name="colorOnPrimary">@color/white</item>
+    
+    <item name="colorSecondary">@color/teal_200</item>
+    <item name="colorSecondaryVariant">@color/teal_700</item>
+    <item name="colorOnSecondary">@color/black</item>
+    
+    <item name="android:statusBarColor" ns2:targetApi="l">?attr/colorPrimaryVariant</item>
+    
+  </style>
+</resources>

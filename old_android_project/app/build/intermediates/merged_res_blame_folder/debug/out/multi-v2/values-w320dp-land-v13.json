@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "droid.surf.app-mergeDebugResources-39:/values-w320dp-land-v13/values-w320dp-land-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\yasun\\.gradle\\caches\\8.9\\transforms\\a692504f870d1db47eaacfc14e8d3306\\transformed\\material-1.11.0\\res\\values-w320dp-land-v13\\values-w320dp-land-v13.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,110",
+                        "endColumns": "54,61",
+                        "endOffsets": "105,167"
+                    }
+                }
+            ]
+        }
+    ]
+}
