@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "droid.surf.app-mergeDebugResources-40:/layout/main.xml",
+        "source": "droid.surf.app-main-43:/layout/main.xml"
+    },
+    {
+        "merged": "droid.surf.app-mergeDebugResources-40:/layout/sub.xml",
+        "source": "droid.surf.app-main-43:/layout/sub.xml"
+    }
+]

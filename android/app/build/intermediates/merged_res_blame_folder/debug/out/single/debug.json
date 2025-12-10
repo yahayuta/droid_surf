@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "droid.surf.app-merged_res-41:/drawable-ldpi_ic_launcher.png.flat",
+        "source": "droid.surf.app-main-43:/drawable-ldpi/ic_launcher.png"
+    },
+    {
+        "merged": "droid.surf.app-merged_res-41:/layout_main.xml.flat",
+        "source": "droid.surf.app-main-43:/layout/main.xml"
+    },
+    {
+        "merged": "droid.surf.app-merged_res-41:/drawable-hdpi_ic_launcher.png.flat",
+        "source": "droid.surf.app-main-43:/drawable-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "droid.surf.app-merged_res-41:/drawable_surf.png.flat",
+        "source": "droid.surf.app-main-43:/drawable/surf.png"
+    },
+    {
+        "merged": "droid.surf.app-merged_res-41:/drawable-mdpi_ic_launcher.png.flat",
+        "source": "droid.surf.app-main-43:/drawable-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "droid.surf.app-merged_res-41:/layout_sub.xml.flat",
+        "source": "droid.surf.app-main-43:/layout/sub.xml"
+    }
+]
