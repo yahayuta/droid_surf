@@ -1,157 +1,143 @@
-# Surf Log 📱🏄‍♂️
+# Surf Log 🌊🏄‍♂️ - Flutter Migration in Progress
 
-A comprehensive Android application for tracking and analyzing your surfing sessions. Log your surf sessions with detailed information about conditions, performance, and experiences. The project has undergone a significant modernization effort, updating its architecture and dependencies to align with modern Android development best practices.
+This project is undergoing a migration from a native Android application to Flutter. The goal is to create a cross-platform mobile application while preserving the existing rich features for tracking and analyzing surfing sessions. The original Android code is preserved in `old_android_project/` for reference and incremental migration.
 
-## 🌊 Features
+## 🚀 Migration Status
+
+- **Initial Setup**: Flutter project initialized and integrated.
+- **UI Migration**: Core UI components from Android have been migrated to Flutter widgets.
+- **Data Layer Migration**: Room database equivalent (using `sqflite`), entities, DAOs, and repositories migrated to Dart.
+- **Business Logic Migration**: Android ViewModels migrated to Flutter state management (using `ChangeNotifier`).
+- **Testing**: Comprehensive unit and widget tests implemented for migrated components.
+
+## 🌊 Features (Migrated to Flutter)
 
 - **Session Logging**: Record detailed surf sessions with date, time, and duration
 - **Condition Tracking**: Log weather, wind conditions, wave size, and crowd levels
 - **Performance Metrics**: Track take-offs and board types used
-- **Data Analysis**: View charts and statistics of your surfing history
-- **Export Functionality**: Share your surf logs with other applications
-- **Multi-language Support**: Available in English and Japanese
+- **Multi-language Support**: Available in English and Japanese (functionality to be re-implemented in Flutter)
 
-## 📱 Screenshots
 
-*Screenshots will be added here*
+
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-- Android Studio Giraffe or later
-- Android SDK 34 (Android 14)
-- Gradle 8.2 or higher
-- Java 17 or higher (recommended for Gradle 8.x)
+- Flutter SDK (version compatible with project, see `flutter_app/pubspec.yaml`)
+- Android Studio or VS Code with Flutter and Dart plugins (recommended)
+- A physical device or emulator for Android/iOS development
 
 ### Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/droid_surf.git
-   cd droid_surf
-   ```
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/yourusername/droid_surf.git
+    cd droid_surf
+    ```
+2.  **Navigate to the Flutter project**
+    ```bash
+    cd flutter_app
+    ```
+3.  **Get Flutter dependencies**
+    ```bash
+    flutter pub get
+    ```
+4.  **Run the Flutter application**
+    ```bash
+    flutter run
+    ```
+    To run on a specific device, use `flutter run -d <device_id>`.
 
-2. **Open in Android Studio**
-   - Launch Android Studio
-   - Select "Open an existing Android Studio project"
-   - Navigate to the cloned directory and select it
+### Running Tests
 
-3. **Build and Run**
-   - Connect an Android device or start an emulator
-   - Click the "Run" button (green play icon) in Android Studio
-   - The app will be installed and launched on your device
-
-### Building from Command Line
-
+To run all Flutter tests:
 ```bash
-# Navigate to project directory
-cd droid_surf
-
-# Build the project
-./gradlew build
-
-# Install on connected device
-./gradlew installDebug
+cd flutter_app
+flutter test
+```
+To run specific tests:
+```bash
+cd flutter_app
+flutter test test/models/surf_record_test.dart
+flutter test test/data/database_helper_test.dart
+# etc.
 ```
 
 ## 📊 Usage
 
+The Flutter application provides a user interface for logging and tracking surf sessions.
+
 ### Logging a Surf Session
 
-1. **Add New Record**: Tap the "ADD RECORD" menu option
-2. **Fill Session Details**:
-   - **Date**: Select the surf session date
-   - **Start Time**: Record when you started surfing
-   - **Duration**: Log how many hours you surfed
-   - **Surf Point**: Enter the location name
-   - **Weather**: Choose from Fine, Cloud, Rain, or Snow
-   - **Wind**: Select wind conditions (Off-shore, On-shore, etc.)
-   - **Wave Size**: Pick from 0ft to Giant Wave
-   - **Crowd**: Rate crowd level from No One to Heavy
-   - **Board Type**: Select your board (Short, Long, SUP, etc.)
-   - **Take-offs**: Count your successful waves
-   - **Comments**: Add personal notes about the session
-
-3. **Save**: Tap "SAVE" to store your session
+1.  **Open the app**: Launch the Flutter application on your device or emulator.
+2.  **Navigate to the Main Screen**: The main screen will display input fields for your surf session details.
+3.  **Fill Session Details**:
+    - **Date**: Select the surf session date using the date picker.
+    - **Start Time**: Select the start time using the time picker.
+    - **Hours**: Enter the duration of your surf session.
+    - **Surf Point**: Enter the location name where you surfed.
+    - **Weather, Wind, Wave Size, Cloud, Board Type**: Select appropriate values from the dropdowns.
+    - **Take-offs**: Enter the number of successful take-offs.
+    - **Comments**: Add any personal notes or observations about the session.
+4.  **Save**: Tap the "Save" button to store your session data.
 
 ### Viewing Your Data
 
-- **Detail View**: See comprehensive session information
-- **Log List**: Browse all your surf sessions
-- **Charts**: Analyze your surfing patterns and statistics
-- **Export**: Share your logs with other applications
+Currently, the application supports logging data. Functionality for viewing detailed records, log lists, charts, and export features are part of the ongoing migration and will be implemented in subsequent phases.
+
 
 ## 🏗️ Project Structure
 
 ```
 droid_surf/
-├── app/
-│   ├── src/main/
-│   │   ├── java/droid/surf/
-│   │   │   ├── SurfRecordActivity.kt      # Main activity (Kotlin, MVVM, ViewBinding)
-│   │   │   ├── SurfRecordDetailActivity.kt # Detail view (Kotlin, MVVM, ViewBinding)
-│   │   │   ├── SurfRecordLogListActivity.kt # Log list (Kotlin, MVVM, ViewBinding)
-│   │   │   ├── SurfRecordEntity.kt        # Room Entity
-│   │   │   ├── SurfRecordDao.kt           # Room Data Access Object
-│   │   │   ├── SurfLogDatabase.kt         # Room Database
-│   │   │   ├── SurfRecordRepository.kt    # Data Repository
-│   │   │   ├── SurfRecordViewModel.kt     # ViewModel for UI data
-│   │   │   └── SurfApplication.kt         # Custom Application class
-│   │   ├── res/
-│   │   │   ├── layout/                      # UI layouts
-│   │   │   ├── values/                      # English strings, themes, colors
-│   │   │   ├── values-ja/                   # Japanese strings
-│   │   │   └── drawable/                    # App icons and images
-│   │   └── AndroidManifest.xml
-│   └── build.gradle
-├── gradle/
-├── build.gradle
-└── settings.gradle
+├── old_android_project/  # Original Android application code (for reference during migration)
+├── flutter_app/          # New Flutter application code
+│   ├── lib/              # Dart source code for the Flutter application
+│   │   ├── main.dart
+│   │   ├── main_screen.dart
+│   │   ├── models/surf_record.dart
+│   │   ├── data/database_helper.dart
+│   │   └── viewmodels/surf_record_viewmodel.dart
+│   ├── android/          # Flutter's Android runner project
+│   ├── ios/              # Flutter's iOS runner project
+│   ├── pubspec.yaml      # Flutter project dependencies
+│   └── test/             # Flutter tests
+├── .gitignore
+├── import-summary.txt
+├── LICENSE
+├── README.md
+└── settings.gradle (removed as it was for original Android project at root)
 ```
 
-## ✨ Modernization Highlights
 
-This project has undergone a significant modernization effort, including:
+## 🛠️ Technical Details (Flutter)
 
-- **AndroidX Migration**: Upgraded all deprecated support libraries to AndroidX for improved compatibility and access to modern features.
-- **Kotlin Conversion**: All core Java activities and utility classes have been converted to Kotlin, leveraging its conciseness and safety features.
-- **ViewBinding Implementation**: Replaced `findViewById` calls with ViewBinding for type-safe and null-safe access to UI elements, reducing boilerplate and runtime errors.
-- **Room Persistence Library**: Migrated from raw SQLite database operations to Room, providing an abstraction layer over SQLite for more robust database interactions, compile-time SQL validation, and easier migration handling.
-- **MVVM Architecture**: Refactored the application to follow the Model-View-ViewModel architectural pattern, separating concerns and improving testability, maintainability, and scalability.
-- **LiveData & Coroutines**: Utilized LiveData for observable data holders and Kotlin Coroutines for asynchronous operations, ensuring a responsive UI and efficient background processing.
-- **Target SDK Update**: Updated `compileSdkVersion` and `targetSdkVersion` to 34 (Android 14) to ensure compatibility with the latest Android features and security enhancements.
+- **Flutter Version**: See `flutter_app/pubspec.yaml`
+- **Dart Version**: See `flutter_app/pubspec.yaml`
+- **Language**: Dart
+- **State Management**: `ChangeNotifier` / `Provider`
+- **Database**: `sqflite` (SQLite)
+- **Architecture**: MVVM-like pattern adapted for Flutter
 
-## 🛠️ Technical Details
 
-- **Minimum SDK**: API 14 (Android 4.0)
-- **Target SDK**: API 34 (Android 14)
-- **Compile SDK**: API 34
-- **Gradle Version**: 8.9
-- **Android Gradle Plugin (AGP)**: 8.2.0
-- **Language**: Kotlin
-- **Database**: Room Persistence Library
+## 📈 Features in Detail (Flutter)
 
-## 📈 Features in Detail
-
-### Session Tracking
+### Session Tracking (Migrated)
 - Record surf session dates and times
 - Track session duration in hours
 - Log surf point locations
 - Monitor weather and wind conditions
-- Document wave sizes and crowd levels
+- Document wave sizes and cloud conditions
 - Track board types and take-off counts
 
-### Data Analysis
-- View session statistics and summaries
-- Analyze surfing patterns over time
-- Compare performance across different conditions
-- Track progress and improvement
-
-### Export & Sharing
-- Export surf logs to other applications
-- Share session details via social media
+### Data Analysis, Export & Sharing (Pending Migration)
+- Session statistics and summaries
+- Analyzing surfing patterns
+- Exporting surf logs
+- Sharing session details
 - Backup and restore functionality
+
 
 ## 🤝 Contributing
 
